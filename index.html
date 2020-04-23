@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>the research process</title>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+        <style>
+            h1 { font-family: Ubuntu; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+            h2 { font-family: Ubuntu; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+            h3 { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+            p, li { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+            blockquote { font-family: Ubuntu; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+            pre { font-family: Ubuntu; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+        </style>
+    </head>
+    <body>
+        <h1 id = "course_title">the research process</h1>
+            <h2 id = "foreword">foreword: what is this and what it is for</h2>
+            <p>the purpose of this class is to teach higher education students, anyone else interested, and you, hopefully, how to do library research.</p>
+            <p>this class is designed to be both self taught, taught online, or in person, both synchronously and asynchronously.</p>
+            <p>the class consists of seven small chapters plus appendices on relevant topics.</p>
+            <p>each chapter is divided as follows:</p>
+            <ul id="chapter_org">
+                <li>title</li>
+                <li>objective: what I expect you to know at the end of each chapter.</li>
+                <li>vocabulary: words or terms key to understanding the chapter.</li>
+                <li>the chapter’s main content.</li>
+                <li>conclusion: the main ideas of the chapter.</li>
+                <li>activities: optional but good to reinforce your understanding.</li>
+                <li>auto-evaluation: a small exercise, often a small quiz, to review what you learned.</li>
+            </ul>
+            <p>depending on your or your professor’s needs, you will go over one or more chapters. however, a basic understanding of the whole class will prove very useful.</p>
+            <p><strong>let's go.</strong></p>
+
+            <h2 class="chapter_title">chapter 0: the research process</h2>
+            <h3 class="objective">objective: the student will identify the research process as well as its steps.</h3>
+            <h3 class="vocabulary">vocabulary: research, process.</h3>
+            <div class="content">
+                <p>writing an essay, composing a speech, or putting together a presentation can all be thought of as processes.</p>
+                <p>the research process, as the name indicates, is the process of doing research.</p>
+                <p>when it comes to library research, the research process consists of:</p>
+                <ul id="research_steps">
+                    <li>knowing the assingment's specifics and deadlines</li>
+                    <li>choosing a topic</li>
+                    <li>finding background information in reference publications</li>
+                    <li>looking for specific information using library resources and the web</li>
+                    <li>organizing foudn information in a logical manner</li>
+                    <li>citing, formatting, and packaging for delivery</li>
+                </ul>
+            </div>
+            <h3 class="conclusion">conclusion: many class assignments require students to do library research. the research process makes library research more efficient.</h3>
+            <div class="activity"><h3>activity 1</h3>
+                <p>
+                    discuss or think about the role the research process has in critical thinking.
+                </p>
+            </div>  
+            <div class="auto-evaluation">
+                <h3>auto-evaluation. answer the following questions:</h3>
+                <div id="quiz"></div>
+                <button id="submit">submit quiz</button>
+                <div id="results"></div>
+            </div>
+            <h2 class="chapter_title"></h2>
+            <h3 class="objective"></h3>
+            <h3 class="vocabulary"></h3>
+            <h3 class="content"></h3>
+            <h3 class="conclusion"></h3>
+            <h3 class="activity"></h3>
+            <h3 class="autoevaluation"></h3>
+
+            <h2 class="appendix1">appendix 1: boolean operators.</h2>
+        
+            <h2>appendix 2: social media</h2>
+        
+            <h2>appendix 3: search engine optimization</h2>
+
+            <h2>appendix 4: stupid conspiracy theories</h2>
+        
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        const myQuestions = [{
+            question: "question 1.1",
+            answers: {
+                a: "answer 1.1",
+                b: "answer 1.2",
+                c: "answer 1.3",
+                d: "answer 1.4"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "question 1.2",
+            answers: {
+                a: "answer 2.1",
+                b: "answer 2.2",
+                c: "answer 2.3",
+                d: "answer 2.4"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "question 1.3",
+            answers: {
+                a: "answer 3.1",
+                b: "answer 3.2",
+                c: "answer 3.3",
+                d: "answer 3.4"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "question 1.4",
+            answers: {
+                a: "answer 4.1",
+                b: "answer 4.2",
+                c: "answer 4.3",
+                d: "answer 4.4"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "question 1.5",
+            answers: {
+                a: "answer 5.1",
+                b: "answer 5.2",
+                c: "answer 5.3",
+                d: "answer 5.4"
+            },
+            correctAnswer: "c"
+        }
+        ];
+
+        function buildQuiz(){
+            //variable to store the html output
+            const output = [];
+
+            //for each question
+            myQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    //variable to store th elist of possible answers
+                    const answers = [];
+
+                    //and for eachavailable answer...
+                    for(letter in currentQuestion.answers){
+
+                        //add html radio button
+                        answers.push(
+                            `<label>
+                                <input type="radio" name="question${questionNumber}" value="${letter}">
+                                ${letter} : 
+                                ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                    }
+                    //add this question and its answer to the output
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question}</div>
+                        <div class="answers"> ${answers.join('')}</div>`
+                    );
+                }
+                );
+                //finally, combine our output list into one string of html and put it on the page
+                quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults(){
+            console.log("hello!");
+
+            //gather answer containers from the quiz
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            //keep track of user's answers
+            let numCorrect = 0;
+
+            //for each question
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                //find selected answer
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                //if answer is correct
+                if(userAnswer === currentQuestion.correctAnswer){
+                    //add the number of correct answers
+                    numCorrect++;
+                    //color the answers green 
+                    answerContainers[questionNumber].style.color = 'lightgreen';
+                } 
+                else{
+                    //color the answer red
+                    answerContainers[questionNumber].style.color = 'red';
+                }
+            });
+            //show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        }
+
+        //display quiz right away
+        buildQuiz();
+
+        //on submit, show results
+        submitButton.addEventListener('click', showResults);
+
+       
+    </script>
+</html>
