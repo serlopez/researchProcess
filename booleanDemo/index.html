@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>boolean demo</title>
+        <style>
+            .car {
+                max-width: 30%;
+                height: auto;
+                visibility: visible;
+                opacity: 0.5;
+            }
+
+            #images {
+                max-width: 60%;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dropdown_choice">
+            <label for = "choices">choose your cars:</label>
+            <select id = choice1>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="pickup">pickup</option>
+                <option value="sedan">sedan</option>
+                <option value="truck">truck</option>
+            </select>
+            <select id="boolean">
+                <option value="or">or</option>
+                <option value="and">and</option>
+                <option value="not">not</option>
+            </select>
+            <select id="choice2">
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="pickup">pickup</option>
+                <option value="sedan">sedan</option>
+                <option value="truck">truck</option>
+            </select>
+            <button onclick="carChoice()">click</button>
+        </div>
+        <div id="images">
+                <img class = "car green pickup" alt="green pickup" src="images/green_pu.jpg">
+                <img class = "car blue pickup" alt="blue pickup" src="images/blue_pu.jpg">
+                <img class = "car red pickup" alt="red pickup" src="images/red_pu.jpg">
+                <img class = "car green sedan" alt="green sedan" src="images/green_sedan.jpg">
+                <img class = "car blue sedan" alt="blue sedan" src="images/blue_sedan.jpg">
+                <img class = "car red sedan" alt="red sedan" src="images/red_sedan.jpg">
+                <img class = "car green truck" alt="green truck" src="images/green_truck.jpg">
+                <img class = "car blue truck" alt="blue truck"src="images/blue_truck.jpg">
+                <img class = "car red truck" alt="red truck" src="images/red_truck.jpg">
+        </div>
+    </body>
+    <script>
+        function carChoice(){
+            let allCars = document.getElementsByClassName('car');
+            for(var i=0; i<allCars.length;i++){
+                allCars[i].style.opacity = 0.5;
+            }
+            let choice1 = document.querySelector("#choice1").value;
+            console.log(choice1);
+            let booleanOp = document.querySelector("#boolean").value;
+            console.log(booleanOp);
+            let choice2 = document.querySelector("#choice2").value;
+            console.log(choice2);
+           
+            if(booleanOp == 'or'){
+                let car1 = document.getElementsByClassName(choice1);
+                let car2 = document.getElementsByClassName(choice2);
+                for(var i=0; i<car1.length; i++){
+                    car1[i].style.opacity = 1;
+                    }  
+                for(var i=0; i<car2.length; i++){
+                    car2[i].style.opacity = 1;
+                }
+            } else if(booleanOp == "and"){
+                let car = document.getElementsByClassName(choice1+" "+choice2);
+                for(var i=0; i<car.length; i++){
+                    car[i].style.opacity = 1;
+                }
+            } else if(booleanOp == "not"){
+                let car1 = document.getElementsByClassName(choice1);
+                let car2 = document.getElementsByClassName(choice2);
+                for(var i = 0; i<car1.length;i++){
+                    car1[i].style.opacity = 1;
+                }
+                for(var i = 0; i<car2.length; i++){
+                    car2[i].style.opacity = 0.5;
+                }
+            }
+        }
+    </script>
+</html>
