@@ -26,7 +26,7 @@
                     //add this question and its answer to the output
                     output.push(
                         `<div class="question"> ${currentQuestion.question}</div>
-                        <div class="answers"> ${answers.join('')}</div>`
+                        <div class="answers"> ${answers.join('')}</div><p></p>`
                     );
                 }
                 );
@@ -55,7 +55,7 @@
                     //add the number of correct answers
                     numCorrect++;
                     //color the answers green 
-                    answerContainers[questionNumber].style.color = 'lightgreen';
+                    answerContainers[questionNumber].style.color = 'green';
                 } 
                 else{
                     //color the answer red
