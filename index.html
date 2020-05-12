@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>the research process</title>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
         <style>
@@ -9,11 +10,12 @@
             .right_screen { float: right; padding: 20px;}
             .left_screen { float: left; padding: 20px;}
             body{ margin: 50px;}
+            ul {display: inline-block;}
             h1 { font-family: Ubuntu; font-size: 36px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
             h2 { font-family: Ubuntu; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
             h3 { font-family: Ubuntu; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
             h4 { font-family: Ubuntu; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
-            p, li { font-family: Ubuntu; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+            p, li , button{ font-family: Ubuntu; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
             .auto-evaluation { border-radius: 5px; display: inline-block; max-width: 80%; background-color: #f5f5f5; padding: 5px;}
         </style>
         <script src="quiz0.js"></script>
@@ -26,47 +28,67 @@
     </head>
     <body>
         <h1 id = "course_title">the research process</h1>
-        <img class="right_screen" id="header_image" src="images/palais-franc-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
-            <h2 id = "foreword">foreword: what this is and what it is for</h2>
-            <p>the purpose of this website/class is to teach higher education students, faculty, anyone else interested, and now you, how to do library research.</p>
-            <p>this class is designed to be self taught, taught online, asynchronous, or in person. It is appropriately organized and tagged to be screen-reader accessible. it is low in style elements to ease adoption.</p>
-            <p>the class consists of seven chapters, plus appendices on relevant topics. the class can be taught as a whole or by relevant chapters. this is modeled after one-shot libary instruction sessions.</p>
+        <img class="right_screen" id="header_image" src="images/palais-franc-1600.jpg" alt="palais franc.">
+            <h2 id = "introduction">introduction: what this is and what it is for</h2>
+            <h3>to the teacher</h3>
+            <p>
+                this is a basic library and information literacy tutorial. it is modelled very generally after the typical one-shot instruction session most students experience in higher education classes that include a research component or assignment.
+
+            </p>
+            <p>
+                this tutorial is organized in seven chapters, covering each step in the research process as defined here. this division in chapters allows the teacher to deliver any material they consider relevant or necessary.
+            </p>
+            <p>
+                it is designed to be taught remotely, in person, synchronously and asynchronously, both with guided assistance and self-taught. it can be taught online and offline if saved locally. it is done using html, javascript, and css. there is no need for huge libraries or dependencies. it is not platform-specific and it does not require special software or hardware other than a typical smart device and a modern browser to run. it is made to run on most devices, including most smart phones. at its barebones, it retains its functionality.
+            </p>
+            <p>
+                this tutorial is marked up in such a way that is accessible to screen readers and other devices and tools, according to <a target="new" href="https://www.w3.org/standards/">w3c standards</a>.
+            </p>
+            <p>
+                this work is licensed under the mit license. if you are a librarian and/or teacher, and are familiar with open educational resources and creative commons licenses, this license is like a creative commons cc-by, but more badass. you can take this piece of code i find useful and change it, copy it, paste it, add to it, strip it, decorate it, ridicule it, publish it, make fun of it, name it, sell it (ha!), call it your own, and pretty much anything else except buy it.
+            </p>
+            <p>
+                if you have any questions, you can contact me at sergiolopezpdx@gmail.com.
+            </p>
+            <h3>to the student.</h3>
+            <p>this is a basic library research tutorial. by the end of it, you sould be able to conduct basic academic research for your term paper, essay, speech, presentation, or any other project that requires you to do quality academic research.</p>
+            <p>the tutorial consists of seven chapters, plus appendices on relevant topics.</p>
             <p>each chapter is divided as follows:</p>
             <ul id="chapter_org">
-                <li>title</li>
+                <li>title.</li>
                 <li>objective: what I expect you to know at the end of each chapter.</li>
-                <li>vocabulary: words or terms key to understanding the chapter.</li>
+                <li>vocabulary: words or terms important to understand the chapter.</li>
                 <li>the chapter’s main content.</li>
                 <li>conclusion: the main ideas of the chapter.</li>
-                <li>activities: optional but good to reinforce your understanding.</li>
-                <li>auto-evaluation: a small exercise, often a small quiz, to review what you learned.</li>
+                <li>activities: optional but recommended.</li>
+                <li>auto-evaluation: a quiz of five questions.</li>
             </ul>
-            <p><strong>if you are here as a student</strong>, depending on your professor’s needs, you will go over one or more chapters. however, a basic understanding of the whole class will prove very useful.</p>
+            <p>depending on your needs as a class, you will go over one or more chapters. however, a basic understanding of the whole class will prove very useful.</p>
             <p><strong>let's go.</strong></p>
             <div class="chapter">
                 <h2 class="chapter_title">chapter 0: the research process</h2>
                 
                 <h3 class="objective">objective: the student will identify the research process as well as its steps.</h3>
-                <h3 class="vocabulary">vocabulary<a href="#footnote1"><sup>1</sup></a><a href="https://www.merriam-webster.com/dictionary/research">research</a>, <a href="https://www.merriam-webster.com/dictionary/process">process</a>.</h3>
-                <img class = "left_screen" src="images/grown-fat-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary<a href="#footnote1"><sup>1</sup></a>: <a target="new" href="https://www.merriam-webster.com/dictionary/research">research</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/process">process</a>.</h3>
+                <img class = "left_screen" src="images/grown-fat-1600.jpg" alt="grown fat.">
                 <div class="content">
                     <p>writing an essay, composing a speech, or putting together a presentation can all be thought of as processes.</p>
                     <p>the research process, as the name indicates, is the process of doing research.</p>
                     <p>when it comes to library research, the research process consists of the following steps:</p>
                     <ul id="research_steps">
-                        <li>knowing the assignment's specifics and deadlines</li>
-                        <li>choosing a topic</li>
-                        <li>finding background information in reference publications</li>
-                        <li>looking for specific information using library resources and the web</li>
-                        <li>organizing found information in a logical manner</li>
-                        <li>citing, formatting, and packaging for delivery</li>
+                        <li>knowing the assignment's specifics and deadlines.</li>
+                        <li>choosing a topic.</li>
+                        <li>finding background information in reference publications.</li>
+                        <li>looking for specific information using library resources and the web.</li>
+                        <li>organizing found information in a logical manner.</li>
+                        <li>citing, formatting, and packaging for delivery.</li>
                     </ul>
                     <p>
-                        these steps are part of a process. it is the most effective to follow them in logical sequence, as above.
+                        these steps are part of a process. processes are most effective when youn follow the steps in a logical manner, as above.
                     </p>
                 </div>
                 <h3 class="conclusion">conclusion: many class assignments require students to do library research. the research process makes library research more efficient.</h3>
-                <div class="activity"><h3>activity: <p>discuss or think about the role the research process has in <a href="https://dictionary.cambridge.org/us/dictionary/english/critical-thinking">critical thinking<a href="#footnote2"><sup>2</sup></a>.</a></p>
+                <div class="activity"><h3>activity: <p>discuss or think about the role the research process has in <a target="new" href="https://dictionary.cambridge.org/us/dictionary/english/critical-thinking">critical thinking<a href="#footnote2"><sup>2</sup></a>.</a></p>
                 <p>identify the step in the research process at which you are right now in your project.</p></h3>
                 </div>  
                 <div class="auto-evaluation">
@@ -80,8 +102,8 @@
                 <h2 class="chapter_title">chapter 1: getting to know your project</h2>
                 
                 <h3 class="objective">objective: the student will describe their assignment using the specifications given by the professor.</h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://owl.purdue.edu/owl/research_and_citation/using_research/citation_style_chart.html">citation style</a>, <a href="https://www.merriam-webster.com/dictionary/persuasive">persuasive</a>, <a href="https://www.merriam-webster.com/dictionary/expository">expository</a>, <a href="https://www.merriam-webster.com/dictionary/narrative">narrative</a>, <a href="https://www.merriam-webster.com/dictionary/descriptive">descriptive</a>.</h3>
-                <img class="right_screen"src="images/sitting-editorial-armchair-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://owl.purdue.edu/owl/research_and_citation/using_research/citation_style_chart.html">citation style</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/persuasive">persuasive</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/expository">expository</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/narrative">narrative</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/descriptive">descriptive</a>.</h3>
+                <img class="right_screen"src="images/sitting-editorial-armchair-1600.jpg" alt="sitting editorial armchair.">
                 <div class="content">
                     <p>the first step in the research process is to detemine the projects's specifications and expectations.</p>
                     <p>familiarize yourself with the project before getting to work on it. clarify expectations.</p>
@@ -100,7 +122,7 @@
                 </div>
                 <h3 class="conclusion">conclusion: It is a good idea to know the class assignment before beginning research.
                 </h3>
-                <div class="activity"><h3>activity: <p>look up <a href="https://www.gallaudet.edu/tutorial-and-instructional-programs/english-center/the-process-and-type-of-writing/styles-of-essays/guide-to-different-kinds-of-essays">types of essays</a> and learn what a narrative essay, a descriptive essay, an expository essay, and a persuasive essay are. which one describes best your essay or presentation?</p></h3>
+                <div class="activity"><h3>activity: <p>look up <a target="new" href="https://www.gallaudet.edu/tutorial-and-instructional-programs/english-center/the-process-and-type-of-writing/styles-of-essays/guide-to-different-kinds-of-essays">types of essays</a> and learn what a narrative essay, a descriptive essay, an expository essay, and a persuasive essay are. which one describes best your essay or presentation?</p></h3>
                 </div>  
                 <div class="auto-evaluation">
                     <h3>auto-evaluation. answer the following questions:</h3>
@@ -113,8 +135,8 @@
                 <h2 class="chapter_title">Chapter 2: subject, topic and keywords</h2>
                 
                 <h3 class="objective">objective: the student will derive a topic of adequate scope, given an umbrella subject, and derive appropriate keywords to begin research using the method described below.</h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://www.merriam-webster.com/dictionary/subject">subject</a>, <a href="https://www.merriam-webster.com/dictionary/topic">topic</a>, <a href="https://www.merriam-webster.com/dictionary/keyword">keyword</a>, <a href="https://www.merriam-webster.com/dictionary/scope">scope</a>, <a href="https://www.merriam-webster.com/dictionary/reliable">reliable</a>.</h3>
-                <img class = "left_screen" src="images/kiss-me-once-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://www.merriam-webster.com/dictionary/subject">subject</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/topic">topic</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/keyword">keyword</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/scope">scope</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/reliable">reliable</a>.</h3>
+                <img class = "left_screen" src="images/kiss-me-once-1600.jpg" alt="kiss me once.">
                 <div class="content">
                     <p>
                         the next step in the research process is to establish a topic from a given, general subject, and develop keywords.
@@ -126,22 +148,24 @@
                         scope. too narrow, specific? not enough information, results in wasted time doing difficult research. <br>
                         too broad, vague? too much information, results in generic, boring papers in which no one learned anything.
                     </p>
-                    <p>
-                        examples:
-                    </p>
+                    
                     <ul id="example_list">
-                    <li><i>1: i want to write about the effects plastic pollution, specifically disposable coffee brew cups, has on the daily life of the piripkura tribe in the brazilian amazon.</i></li>
+                        <p>
+                            examples:
+                        </p>
+                    <li><i>1: i want to write about the effects plastic pollution, specifically disposable coffee</br> brew cups, has on the daily life of the piripkura tribe in the brazilian amazon.</i></li>
                     <li><i>2: i think i will write about pitbulls.<i></li>
                     </ul>
                     <h4>narrow and define your topic<a href="#footnote4"><sup>4</sup></a></h4>
                     <p>
                         to help you narrow and define your project down to an adequate topic, first <strong>phrase it as a (research) question</strong>.
                     </p>
-                    <p>then ask yourself:</p>
+                    
                     <ul id="narrowtopic">
-                        <li>how much you <strong>do</strong> know about the topic</li>
-                        <li>how much you <strong>don't</strong>  know about the topic</li>
-                        <li>if what you know about the topic is <strong>reliable</strong></li>
+                        <p>then ask yourself:</p>
+                        <li>how much you <strong>do</strong> know about the topic.</li>
+                        <li>how much you <strong>don't</strong>  know about the topic.</li>
+                        <li>if what you know about the topic is <strong>reliable</strong>.</li>
                     </ul>
                     <p>finally, pick a topic you are curious about or find interesting.</p>
                 </div>
@@ -160,8 +184,8 @@
                 <h2 class="chapter_title">chapter 3: finding background information</h2>
                 
                 <h3 class="objective">objective: the student will learn how to use dictionaries, encyclopedias,  and reliable online reference resources to obtain basic facts and the proper vocabulary.</h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://www.merriam-webster.com/dictionary/reference">reference</a>, <a href="https://www.merriam-webster.com/dictionary/encyclopedia">encyclopedia</a>, <a href="https://www.merriam-webster.com/dictionary/dictionary">dictionary</a>, <a href="https://www.merriam-webster.com/dictionary/source">source</a></h3>
-                <img class = "right_screen" src="images/soldier-barrel-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://www.merriam-webster.com/dictionary/reference">reference</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/encyclopedia">encyclopedia</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/dictionary">dictionary</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/source">source</a>.</h3>
+                <img class = "right_screen" src="images/soldier-barrel-1600.jpg" alt="soldier barrel.">
                 <div class="content">
                     <p>
                         once you have a topic to research, the next step is to find background information to help you get started.
@@ -179,7 +203,7 @@
                         yes, <strong>use wikipedia, just don't tell anyone you did</strong>. 
                     </p>
                     <p>
-                        wikipedia is a great place to begin research, as long as you keep in mind that <strong>wikipedia is a place, not a source</strong>. we don’t cite places, we cite sources. use wikipedia’s reference list to find the source, and cite the source.
+                        wikipedia is a great place to begin research, as long as you keep in mind that <strong>wikipedia is a place, not a source</strong>. we don’t cite places, we cite sources. use wikipedia’s reference list to find the source, and <strong>cite the source</strong>.
                     </p>
                     <p>
                         none of your statements should ever begin with "according to wikipedia,..." or "wikipedia says...". if you find yourself doing this, stop.
@@ -206,8 +230,8 @@
                 <h2 class="chapter_title">chapter 4: using library resources to find quality information</h2>
                 
                 <h3 class="objective">objective: the student will learn how to use the library catalog and library databases. </h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://en.wikipedia.org/wiki/Library_catalog">library catalog</a>, <a href="https://www.merriam-webster.com/dictionary/monograph">monograph</a>, <a href="https://www.merriam-webster.com/dictionary/article">article</a>, <a href="https://www.merriam-webster.com/dictionary/journal">journal</a>, <a href="https://www.merriam-webster.com/dictionary/database">database</a>, <a href="https://www.merriam-webster.com/dictionary/abstract">abstract</a>.</h3>
-                <img class = "left_screen" src="images/gondolette-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://en.wikipedia.org/wiki/Library_catalog">library catalog</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/monograph">monograph</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/article">article</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/journal">journal</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/database">database</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/abstract">abstract</a>.</h3>
+                <img class = "left_screen" src="images/gondolette-1600.jpg" alt="gondolette.">
                 <div class="content">
                     <h4>searching for books in the libray catalog</h4>
                     <p>
@@ -217,7 +241,7 @@
                         however, this information is usually not enough. for more substantial information, we need to use the resources found in your library.
                     </p>
                     <p>
-                        through your college (or public library)<a href="#footnote5"><sup>5</sup></a> you will find books using the library catalog and academic quality articles using the library’s electronic databases.
+                        your college (or public<a href="#footnote5"><sup>5</sup></a>) library is the place where you will find books using the library catalog, and academic journal articles using the library’s electronic databases.
                     </p>
                     <p>
                         books are the best choice when looking for in-depth information about a topic. <strong>books usually talk about one thing for a very long time</strong>.
@@ -229,12 +253,12 @@
                         books are found in the library using the library catalog.
                     </p>
                     <p>
-                        note: the instructions below and the rest of this chapter references a very specific library. If you are a student other than a <a href="https://www.mhcc.edu/">mhcc</a> student, the way you access and use your own library catalog might be a bit different, but not by much, since the logic is the same. ask a librarian if you have any questions. They will be more than happy to help you.
+                        <i>note: the instructions below and the rest of this chapter references a very specific library. If you are a student other than a <a target="new" href="https://www.mhcc.edu/">mhcc</a> student, the way you access and use your own library catalog and databases might be a bit different, but not by much, since the logic is the same. ask a librarian if you have any questions. They will be more than happy to help you.</i>
                     </p>
-                    <img class = "right_screen" src="images/four-rabbits-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                    <img class = "right_screen" src="images/four-rabbits-1600.jpg" alt="four rabbits.">
                     <p>to find books in the library catalog:</p>
                     <ul id="librarycatalog">
-                        <li>locate the <a href="https://www.mhcc.edu/library/">library catalog</a>'s search field</li>
+                        <li>locate the <a target="new" href="https://www.mhcc.edu/library/">library catalog</a>'s search field</li>
                         <li>type your keyword(s) and click <strong>search</strong></li>
                     </ul>
                     <p>
@@ -253,18 +277,18 @@
                         as you inspect the book, first notice title, author, publication date, and summary.
                     </p>
                     <p>
-                        then look at the book’s availability: here you can find out if the book is in the library and where in the shelves it’s located. if it’s an ebook, it's usually just a matter of following links.
+                        then look at the book’s availability: here you can find out if the book is in the library and where in the shelves it’s located. if it’s an ebook, accessing it and reading it is usually just a matter of following links.
                     </p>
                     <p>
-                        lastly, notice the tools field. here you will find the correct citation in the style of your choice, for when the time comes to cite your sources.
+                        lastly, notice the tools field. here you will find the correct citation in the style of your choice under the "cite" icon, for when the time comes to cite your sources.
                     </p>
                     <p>
-                        if we don’t have the book you need, and another library has it and it’s willing to lend it, we can get the book for you by summit or interlibrary loan (ill).
+                        if we don’t have the book you need, and another library has it and it’s willing to lend it, we can get the book for you through summit or interlibrary loan (ill).
                     </p>
                     <h4>searching for journal articles in library databases</h4>
-                    <img class = "left_screen" src="images/reached-city-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                    <img class = "left_screen" src="images/reached-city-1600.jpg" alt="reached city.">
                     <p>
-                        while books talk about only one thing, in depth, for a very long time, journal articles found in databases typically <strong>talk about very specific things, for a short period of time</strong>.
+                        while books talk about only one broad thing, in depth, for a very long time, journal articles found in databases typically <strong>talk about very specific things, for a short period of time</strong>.
                     </p>
                     <p>
                         make sure you know the difference between library, database, journal, and article, as well as their relationship:
@@ -278,22 +302,22 @@
                     </p>
                     <ul>
                         <li>locate the library research link</li>
-                        <li>at the library research page, click the databases link</li>
+                        <li>at the library research page, click the <strong>databases</strong> link</li>
                     </ul>
                     <p>
                         here you will find the <strong>find articles</strong> page. from here you can find databases either by name through the a-z or by subject.
                     </p>
                     <p>
-                        examples of the databases you will find the most useful are <a href="https://web-b-ebscohost-com.ezp.mhcc.edu/ehost/search/advanced?vid=0&sid=bd8113da-4b08-43d3-9aaf-d89eafebae8e%40pdc-v-sessmgr05">academic search complete</a>, <a href="https://go-gale-com.ezp.mhcc.edu/ps/start.do?p=PPPM&u=mthoodcc">popular magazines</a>, and <a href = "https://go-gale-com.ezp.mhcc.edu/ps/start.do?p=OVIC&u=mthoodcc">opposing viewpoints</a>.
+                        examples of the databases you will find the most useful are <a target="new" href="https://web-b-ebscohost-com.ezp.mhcc.edu/ehost/search/advanced?vid=0&sid=bd8113da-4b08-43d3-9aaf-d89eafebae8e%40pdc-v-sessmgr05">academic search complete</a>, <a target="new" href="https://go-gale-com.ezp.mhcc.edu/ps/start.do?p=PPPM&u=mthoodcc">popular magazines</a>, and <a target="new" href = "https://go-gale-com.ezp.mhcc.edu/ps/start.do?p=OVIC&u=mthoodcc">opposing viewpoints</a>.
                     </p>
                     <p>
                         for the most part, databases’ use and structure are very similar. they mainly differ in subject matter and scope.
                     </p>
                     <p>
-                        click the database's link. if you see a page asking you for your <a href="https://mhcc.edu/">mhcc</a> id number and <a href="https://my.mhcc.edu/ics">mymhcc</a> password, please have it ready (not an issue if you do this from campus).
+                        click the database's link. if you see a page asking you for your <a target="new" href="https://mhcc.edu/">mhcc</a> id number and <a target="new" href="https://my.mhcc.edu/ics">mymhcc</a> password, please have it ready (not an issue if you do this from campus).
                     </p>
                     <p>
-                        if everything goes as expected, you will see the database’ initial search page. type your keywords<a href="#footnote6"><sup>6</sup></a>, use boolean logic if necessary, select articles in full text, select peer-reviewed if the professor specified it, date of publication limits if desired, and press search.
+                        if everything goes as expected, you will see the database’ initial search page. type your keywords<a href="#footnote6"><sup>6</sup></a>, use <a href="#boolean-operators">boolean logic</a> if necessary, select articles in full text, select peer-reviewed if the professor specified it, date of publication limits if desired, and press search.
                     </p>
                     <p>
                         if your search is successful, the results page will show you a list of articles relevant<a href="#footnote7"><sup>7</sup></a> to your keywords. select an article by clicking its title.
@@ -314,11 +338,11 @@
                         at the full text page, you will also find the correct citation for the article, in the style of your choice. copy and paste the citation. the database can also send you the article’s citation by email, along with the article, if you choose.
                     </p>
                     <p>
-                        you may be able to find articles easier through <a href="https://scholar.google.com/">google scholar</a>. however, accessing databases using scholar is like trying to get in using the back door. if you find and try to download an article through google scholar, you will likely get a message saying basically "who the hell are you? give me $30".
+                        you may be able to find articles easier using <a target="new" href="https://scholar.google.com/">google scholar</a>. however, accessing databases using scholar is like trying to get in using the back door. if you find and try to download an article through google scholar, you will likely get a message saying basically "who the hell are you? give me $30".
                     </p>
                 </div>
                 <h3 class="conclusion">conclusion: use library resources to find books, ebooks and articles from journal databases.</h3>
-                <div class="activity"><h3>activity: <p>go to the <a href="https://mhcc.edu/FindArticles/">find articles</a> page and identify two or three journal databases you would likely use, based on your program, interests, etc.</p></h3>
+                <div class="activity"><h3>activity: <p>go to the <a target="new" href="https://mhcc.edu/FindArticles/">find articles</a> page and identify two or three journal databases you would likely use, based on your program, interests, etc.</p></h3>
                     
                 </div>  
                 <div class="auto-evaluation">
@@ -329,14 +353,14 @@
                 </div>
             </div>
             <div class="intermission">
-                <h2>intermission: match the question/request for information with its best source.</h2>
+                <h2><a href = "intermission/intermission.html">intermission</a>: match the question/request for information with its best source.</h2>
             </div>
             <div class="chapter">
                 <h2 class="chapter_title">chapter 5: searching for information on the web</h2>
                 
                 <h3 class="objective">objective: the student will use the web and the site: command to search for information.</h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://www.merriam-webster.com/dictionary/Internet">internet</a>, <a href="https://www.merriam-webster.com/dictionary/World%20Wide%20Web">web</a>, <a href="https://www.merriam-webster.com/dictionary/domain">domain</a>.</h3>
-                <img class = "right_screen" src="images/riding-goat-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://www.merriam-webster.com/dictionary/Internet">internet</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/World%20Wide%20Web">web</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/domain">domain</a>.</h3>
+                <img class = "right_screen" src="images/riding-goat-1600.jpg" alt="riding goat.">
                 <div class="content">
                     <p>
                         while library resources may be more than enough for your project, you may have to go to the web to get the information you need.
@@ -377,7 +401,7 @@
                         this works not just for domains, it also allows you to find information within a single website using its <strong>url</strong>.
                     </p>
                 </div>
-                <h3 class="conclusion">conclusion: the <i>site:</i> command is a powerful tool we can use to search the web for quality information for our project.</h3>
+                <h3 class="conclusion">conclusion: the <i>site:</i> command is a powerful tool you can use to search the web for quality information for your project.</h3>
                 <div class="activity"><h3>activity: <p>find information on the web coming from .com, .org, .edu, and .gov websites. compare results and think on how this feature can help you do better web research.</p></h3>
                    
                 </div>  
@@ -393,11 +417,11 @@
                 </h2>
                 
                 <h3 class="objective">objective: the student will apply format rules according to their specific style. the student will also acknowledge the need to cite and give credit to information sources.</h3>
-                <h3 class="vocabulary">vocabulary: <a href="https://www.merriam-webster.com/dictionary/citation">citation</a>, <a href="https://www.merriam-webster.com/dictionary/plagiarize">plagiarize</a>, <a href="https://www.merriam-webster.com/dictionary/paraphrase">paraphrase</a>, <a href="https://www.merriam-webster.com/dictionary/quote">quote</a>.</h3>
-                <img class = "left_screen" src="images/naive-confession-1600.jpg" alt="this image is purely ornamental and has nothing to do with the text. if you are reading this using a text-to-speech device, you are not missing much.">
+                <h3 class="vocabulary">vocabulary: <a target="new" href="https://www.merriam-webster.com/dictionary/citation">citation</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/plagiarize">plagiarize</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/paraphrase">paraphrase</a>, <a target="new" href="https://www.merriam-webster.com/dictionary/quote">quote</a>.</h3>
+                <img class = "left_screen" src="images/naive-confession-1600.jpg" alt="naive confession.">
                 <div class="content">
                     <p>
-                        you have chosen a topic, done research on it, and organized your findings in a logical manner, in an essay, speech, or presentation. It is time to cite your sources and make yor project look nice.
+                        you have chosen a topic, done research on it, and organized your findings in a logical manner, in an essay, speech, or presentation. It is time to cite your sources and make your project look nice.
                     </p>
                     <p>
                         your professor expects your paper to look a certain way.
@@ -427,7 +451,7 @@
                         your professor knows you have a writing style and vocabulary. they also know what you do and do not know about the topic.
                     </p>
                     <p>
-                        most student papers bought on the web are either gibberish writen by an algorythm or by some guy who "freelances" for a term paper mill.
+                        most student papers bought on the web are either gibberish put together algorythm, or nonsense written by some guy who "freelances" for a term paper mill.
                     </p>
                     <p>
                         put all this together, cheating is easy to spot and hardly worth it.
@@ -453,16 +477,18 @@
             </div>
             
 
-            <h2 class="appendix1">appendix 1: boolean operators.</h2>
+            <a href="boolean_demo/boolean_demo.html" target="new"><h2 class="appendix" id="boolean-operators">appendix 1: boolean operators</h2></a>
 
-            <h2 class="appendix2">appendix 2: how to evaluate information.</h2>
+            <a href="how_to_evaluate/how_to_evaluate_info.html" target="new"><h2 class="appendix">appendix 2: how to evaluate information</h2></a>
+
+            <a href="reference_interview/reference_interview.html" target="new"><h2 class="appendix">appendix 3: talking to the reference librarian</h2></a>
         
 
         <div id="footnotes">
             <h2>footnotes:</h2>
-            <p id="footnote1">definitions: merriam-webster dictionary. <a href="https://www.merriam-webster.com/">merriam-webster.com</a></p>
+            <p id="footnote1">definitions: merriam-webster dictionary. <a target="new" href="https://www.merriam-webster.com/">merriam-webster.com</a></p>
             <p id="footnote2">
-                cambridge dictionary: <a href="https://dictionary.cambridge.org/">dictionary.cambridge.org</a>
+                cambridge dictionary: <a target="new" href="https://dictionary.cambridge.org/">dictionary.cambridge.org</a>
             </p>
             <p id="footnote3">
                 https://www.gallaudet.edu/tutorial-and-instructional-programs/english-center/the-process-and-type-of-writing/styles-of-essays/guide-to-different-kinds-of-essays
@@ -482,9 +508,34 @@
             <p id="footnote8">
                 some government websites, like the u.s. postal service, or military recruitment sites, use the .com domain.
             </p>
+            <p>images courtesy of <a href="https://www.oldbookillustrations.com/">oldbookillustrations.com</a></p>
+            <p>
+                this project was made possible in part by a mini grant from the <a href="http://www.ala.org/acrl/">acrl</a> professional development scholarship.
+            </p>
         </div>    
         
         <div id="footer">
+            <!--MIT License
+
+Copyright (c) 2020 Sergio Lopez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.-->
 
         </div>
     </body>
@@ -735,7 +786,7 @@
         const resultsContainer4 = document.getElementById('results4');
         const submitButton4 = document.getElementById('submit4');
         const myQuestions4 = [{
-            question: "name the library resources you can use during your research.",
+            question: "name the library resources you can use for your research.",
             answers: {
                 a: "the internet.",
                 b: "books, ebooks and journal articles.",

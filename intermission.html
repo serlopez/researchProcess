@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>quiz practice</title>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+        <style>
+            img {width: 25%; height: auto;}
+            .right_screen { float: right; padding: 20px;}
+            .left_screen { float: left; padding: 20px;}
+            body{ margin: 50px;}
+            ul {display: inline-block;}
+            h1 { font-family: Ubuntu; font-size: 36px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+            h2 { font-family: Ubuntu; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+            h3 { font-family: Ubuntu; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+            h4 { font-family: Ubuntu; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+            p, li, button { font-family: Ubuntu; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+            .auto-evaluation { border-radius: 5px; display: inline-block; max-width: 80%; background-color: #f5f5f5; padding: 5px;}
+        </style>
+    </head>
+    <body>
+        <h1 id="title">intermission: pick the right source</h1>
+        <p>below you will find a list of 20 <a href="https://www.merriam-webster.com/dictionary/inquiry">inquiries</a>. for each one, there is a best source, either a reference item, a book or a database article. i have medals.</p>
+        <p id="question-container"></p>
+        <button id="submit">submit</button>
+        <h2 id="results"></h2>
+        <p id="medal"></p>
+        <script>
+            const questionList = [
+                {
+                    question: "1. the 2008 mortgage crisis. how it happened and why.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "2. data on global temperatures, 1980 to today.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "3. middle america’s economy and the decline of manufacturing jobs",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "4. a collection of poems by emily dickinson.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "5. latest findings on a new coronavirus vaccine.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "6. possible benefits of the inclusion of insects in the human diet.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "7. a comprehensive history of the civil war.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "8. jonas salk’s date of birth.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "9. the capital of tanzania",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "10. whether a random celebrity has actually died or not.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "11. the effect climate change has on the planet.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: `12."i am the greatest, i said that even before i knew i was."`,
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "13. crime and punishment by fyodor dostoevsky.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "14. an analysis of crime and punishment by fyodor dostoevski.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "15. magazine story about the high price of medications.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "16. where chocolate comes from.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "17. the chemical process by which grain becomes alcohol.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "18. the duration of the hundred year war.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "19. the meaning of exponential growth.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "20. renewable power. sources, history, and current applications.",
+                    answers: {
+                        a: "reference",
+                        b: "book",
+                        c: "article"
+                    },
+                    correctAnswer: "b"
+                }
+            ];
+            
+            console.log(questionList);
+
+            const questionContainer = document.querySelector('#question-container');
+            const submitButton = document.querySelector('#submit');
+            const resultsContainer = document.querySelector('#results');
+            const medalContainer = document.querySelector('#medal').focus();
+
+            //build the quiz function
+            function buildQuiz(){
+                //array to store the html output
+                const output = [];
+                //for each question
+                questionList.forEach((currentQuestion, questionNumber) => {
+                    console.log(currentQuestion);
+                    console.log(questionNumber);
+                    //array to store list of possible answers
+                    const answers = [];
+                    //for each available answer
+                    for (letter in currentQuestion.answers){
+                        console.log(letter);
+                        //add radio button
+                        answers.push(
+                            `<label>
+                                <input type="radio" name="question${questionNumber}" value="${letter}">
+                                ${letter}: 
+                                ${currentQuestion.answers[letter]}
+                             </label>`   
+                        );
+                    }
+                    //add question and answer to output
+                    output.push(
+                        `<div class="question">${currentQuestion.question}</div>
+                        <div class="answer">${answers.join('')}</div><p></p>`
+                    );
+                });
+                questionContainer.innerHTML = output.join('');
+                console.log(questionContainer);
+            }
+
+            function showResults(){
+            console.log("hello!");
+
+            //gather answer containers from the quiz
+            const answerContainers = questionContainer.querySelectorAll('.answer');
+            console.log(answerContainers);
+
+            //keep track of user's answers
+            let numCorrect = 0;
+
+            //for each question
+            questionList.forEach((currentQuestion, questionNumber) => {
+                //find selected answer
+                const answerContainer = answerContainers[questionNumber];
+                console.log(answerContainer);
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                //if answer is correct
+                if(userAnswer === currentQuestion.correctAnswer){
+                    //add the number of correct answers
+                    numCorrect++;
+                    //color the answers green 
+                    answerContainers[questionNumber].style.color = 'green';
+                } 
+                else{
+                    //color the answer red
+                    answerContainers[questionNumber].style.color = 'red';
+                }
+            });
+            //show number of correct answers out of total
+            resultsContainer.innerHTML = `your score is ${numCorrect} out of ${questionList.length}`;
+            //award medals 
+            if(numCorrect == 20){
+                goldMedal();
+            } else if(numCorrect == 19){
+                silverMedal();
+            } else if(numCorrect == 18){
+                bronzeMedal();
+            }
+        }
+
+        function goldMedal(){
+            console.log('gold medal');
+            medalContainer.innerHTML = 'here is your medal: 🥇' ;
+        }
+
+        function silverMedal(){
+            console.log('silver medal');
+            medalContainer.innerHTML = 'here is your medal: 🥈';
+        }
+
+        function bronzeMedal(){
+            console.log('bronze medal');
+            medalContainer.innerHTML = 'here is your medal: 🥉' ; 
+        }
+
+            buildQuiz();
+
+            submitButton.addEventListener('click', showResults);
+        </script>
+    </body>
+</html>
